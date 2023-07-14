@@ -1,0 +1,20 @@
+<p>Details</p>
+
+
+<section>
+<img [src]="productDetail?.thumbnail" alt="Thumbnail of {{productDetail?.title}}">
+<ul>
+  <li><h3>{{productDetail?.title}}</h3></li>
+  <li>{{productDetail?.description}}</li><br>
+  <li><b>Brand: </b>{{productDetail?.brand}}</li>
+  <li><b>Category: </b>{{productDetail?.category}}</li>
+  <li><b>Price: </b>{{productDetail?.price}}</li>
+  <li><b>Discount: </b>{{productDetail?.discountPercentage}}%</li>
+  <li><b>Rating: </b>{{productDetail?.rating}}</li>
+  <li><b>Available: </b>{{productDetail?.stock}}</li>
+  
+</ul>
+<div *ngFor="let images of imagesList">
+  <img [src]="images" alt="Product Image">
+</div>
+</section>

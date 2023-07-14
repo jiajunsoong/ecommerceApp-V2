@@ -1,0 +1,20 @@
+<p>Product List</p>
+<section>
+  <div>
+    <select>
+      <option value="all">All</option>
+      <option value="smartphones">Smartphones</option>
+      <option value="laptops">Laptops</option>
+      <option value="fragrances">Fragrances</option>
+      <option value="skincare">Skincare</option>
+      <option value="groceries">Groceries</option>
+      <option value="home-decoration">Home-Decoration</option>
+    </select>
+  </div>
+  <br>
+  <div>
+    <app-product 
+    *ngFor="let ProductInterface of productList.products"[product]="ProductInterface"></app-product>
+  </div>
+  
+</section>
