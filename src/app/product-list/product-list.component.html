@@ -1,6 +1,6 @@
 <p>Product List</p>
 <section>
-  <div>
+  <!-- <div>
     <select>
       <option value="all">All</option>
       <option value="smartphones">Smartphones</option>
@@ -10,11 +10,30 @@
       <option value="groceries">Groceries</option>
       <option value="home-decoration">Home-Decoration</option>
     </select>
+  </div> -->
+  <div>
+    <select name="Filter">
+      <option value="" selected>All</option>
+      <ng-container *ngFor="let ProductCategory of productList.products">
+        <option [value]="ProductCategory.category">{{ProductCategory.category}}</option>
+      </ng-container>
+    </select>
   </div>
+  <!-- <div>
+    <select   name="profile" class="bx--text-input"  [formControl]="profile">   
+      <option value=""  selected>Select profile name</option> 
+     <ng-container *ngFor="let state of profiles;">
+          <option [value]="state.name" *ngIf="state.subject =='maths'">
+              {{ state.name }}
+          </option>
+      </ng-container>
+</select>
+  </div> -->
   <br>
   <div>
     <app-product 
-    *ngFor="let ProductInterface of productList.products"[product]="ProductInterface"></app-product>
+    *ngFor="let ProductInterface of productList.products | filter: selectedCategory"
+    [product]="ProductInterface"></app-product>
   </div>
   
 </section>

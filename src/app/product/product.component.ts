@@ -8,7 +8,6 @@ import { ProductInterface } from '../product-interface';
   
 })
 export class ProductComponent {
-  
   @Input() product!: ProductInterface;
   
 }
