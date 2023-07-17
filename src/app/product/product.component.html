@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <img [src]="product.thumbnail" alt="Thumbnail of {{product.title}}">
   <ul>
     <li><h3>{{product.title}}</h3></li>
@@ -8,4 +8,18 @@
   </ul>
   <a [routerLink]="['/products', product.id]">Learn more</a>
 </section>
-<br>
+<br> -->
+
+<mat-card class="product-card">
+  <mat-card-header><h3><b>{{product.title}}</b></h3></mat-card-header>
+  <img mat-card-image [src]="product.thumbnail" alt="Thumbnail of {{product.title}}">
+  <mat-card-content>
+    <ul>
+      <li>{{product.description}}</li>
+      <li>Brand: {{product.brand}}</li>
+      <li>Price: {{product.price}}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions><a [routerLink]="['/products', product.id]">Learn more</a></mat-card-actions>
+  <mat-card-footer></mat-card-footer>
+</mat-card>

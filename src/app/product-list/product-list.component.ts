@@ -10,8 +10,17 @@ import { ProductsService } from '../products.service';
 export class ProductListComponent implements OnInit {
   productList:any =[];
   //set to any mean any type of data
-  categories: any = [];
+  
   selectedCategory: any = ''; // Track the selected category
+  categories: any[] = [
+    {value: '', viewValue: 'All'},
+    {value: 'smartphones', viewValue: 'Smartphones'},
+    {value: 'laptops', viewValue: 'Laptops'},
+    {value: 'fragrances', viewValue: 'Fragrances'},
+    {value: 'skincare', viewValue: 'Skincare'},
+    {value: 'groceries', viewValue: 'Groceries'},
+    {value: 'home-decoration', viewValue: 'Home-Decoration'},
+  ];
 
   constructor(private productService: ProductsService) {}
 

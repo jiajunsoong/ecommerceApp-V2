@@ -1,4 +1,4 @@
-<p>Product List</p>
+<!-- <p>Product List</p>
 <section>
   <div>
     <select  name="Filter" [(ngModel)]="selectedCategory">
@@ -11,43 +11,23 @@
       <option value="home-decoration">Home-Decoration</option>
     </select>
   </div>
-  <!-- <div>
-    <select name="Filter">
-      <option value="" selected>All</option>
-      <ng-container *ngFor="let ProductCategory of productList.products">
-        <option [value]="ProductCategory.category">{{ProductCategory.category}}</option>
-      </ng-container>
-    </select>
-  </div> -->
-  <!-- <div>
-    <select   name="profile" class="bx--text-input"  [formControl]="profile">   
-      <option value=""  selected>Select profile name</option> 
-     <ng-container *ngFor="let state of profiles;">
-          <option [value]="state.name" *ngIf="state.subject =='maths'">
-              {{ state.name }}
-          </option>
-      </ng-container>
-</select>
-  </div> -->
   <br>
   <div>
     <app-product 
     *ngFor="let ProductInterface of productList.products | filter: selectedCategory"
     [product]="ProductInterface"></app-product>
   </div>
+</section> -->
 
-    <!-- <div>
-      <select name="Filter" [(ngModel)]="selectedCategory">
-        <option *ngFor="let ProductCategory of productList.products" [value]="ProductCategory.category">{{ ProductCategory.category }}</option>
-      </select>
-    </div>
-    <br> -->
-    <!-- <div>
-      <app-product 
-        *ngFor="let product of productList | filter: selectedCategory"
-        [product]="product"
-      ></app-product>
-    </div> -->
 
-  
-</section>
+<form class="product-list">
+  <h2>Product</h2>
+    <mat-form-field appearance="fill" class="product-form">
+      <mat-label>Catergory</mat-label>
+      <mat-select name="Filter" [(ngModel)]="selectedCategory">
+        <mat-option *ngFor="let category of categories" [value]="category.value">{{category.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <app-product *ngFor="let product of productList.products | filter: selectedCategory"
+                 [product]="product"></app-product>
+</form>

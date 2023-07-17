@@ -1,0 +1,18 @@
+/* Styles for the top bar component */
+.top-bar-nav {
+  overflow: hidden;
+}
+
+.top-bar-nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.top-bar-nav a.active {
+  background-color: #04AA6D;
+}
