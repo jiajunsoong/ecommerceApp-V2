@@ -19,12 +19,11 @@
   </div>
 </section> -->
 
-
 <form class="product-list">
   <h2>Product</h2>
     <mat-form-field appearance="fill" class="product-form">
       <mat-label>Catergory</mat-label>
-      <mat-select name="Filter" [(ngModel)]="selectedCategory">
+      <mat-select name="Filter" [(ngModel)]="selectedCategory" class="product-category-select">
         <mat-option *ngFor="let category of categories" [value]="category.value">{{category.viewValue}}</mat-option>
       </mat-select>
     </mat-form-field>

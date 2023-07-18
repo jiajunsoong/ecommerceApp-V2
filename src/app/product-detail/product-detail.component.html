@@ -1,20 +1,24 @@
-<p>Details</p>
-
 
 <section>
-<img [src]="productDetail?.thumbnail" alt="Thumbnail of {{productDetail?.title}}">
-<ul>
-  <li><h3>{{productDetail?.title}}</h3></li>
-  <li>{{productDetail?.description}}</li><br>
-  <li><b>Brand: </b>{{productDetail?.brand}}</li>
-  <li><b>Category: </b>{{productDetail?.category}}</li>
-  <li><b>Price: </b>{{productDetail?.price}}</li>
-  <li><b>Discount: </b>{{productDetail?.discountPercentage}}%</li>
-  <li><b>Rating: </b>{{productDetail?.rating}}</li>
-  <li><b>Available: </b>{{productDetail?.stock}}</li>
-  
-</ul>
-<div *ngFor="let images of imagesList">
-  <img [src]="images" alt="Product Image">
-</div>
+  <h1>{{productDetail?.title}}</h1>
+  <img [src]="productDetail?.thumbnail" alt="Thumbnail of {{productDetail?.title}}" class="product-details-topimage">
+  <ul>
+    <li>{{productDetail?.description}}</li><br>
+    <li><b>Brand: </b>{{productDetail?.brand}}</li>
+    <li><b>Category: </b>{{productDetail?.category}}</li>
+    <li><b>Price: </b>{{productDetail?.price}}</li>
+    <li><b>Discount: </b>{{productDetail?.discountPercentage}}%</li>
+    <li><b>Rating: </b>{{productDetail?.rating}}</li>
+    <li><b>Available: </b>{{productDetail?.stock}}</li>
+  </ul>
+  <button mat-raised-button class="add-to-cart-button" color="primary" (click)="productDetail && addToCart(productDetail)">Add to Cart</button>
+  <br>
+  <!-- <button class="add-to-cart-button" (click)="productDetail && addToCart(productDetail)">Add to Cart</button> -->
+  <div class="slideshow">
+    <button class="slide-button prev" (click)="goToPreviousSlide()">&#8249;</button>
+    <button class="slide-button next" (click)="goToNextSlide()">&#8250;</button>
+    <div *ngFor="let image of imagesList; let i = index" [ngClass]="{'active': i === activeSlideIndex}">
+      <img [src]="image" alt="Product Image">
+    </div>
+  </div>
 </section>

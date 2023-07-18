@@ -9,7 +9,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgFor } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -45,7 +47,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     NgFor, 
     MatInputModule,
     MatAutocompleteModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

@@ -1,1 +1,43 @@
-<p>Cart work</p>
+<h1>Your Cart</h1>
+
+<div *ngIf="cartItems.length === 0" class="empty-cart-message">
+  No item added
+</div>
+
+<!-- <div *ngIf="cartItems.length > 0">
+  <div *ngFor="let cartItem of cartItems" class="cart-product-item">
+    <img [src]="cartItem.product.thumbnail" alt="Thumbnail of {{ cartItem.product.title }}" class="cart-product-image">
+    <span>{{ cartItem.product.title }}</span>
+    <span>RM {{ cartItem.product.price }}</span>
+    <br>
+    <input type="number" [(ngModel)]="cartItem.quantity" (change)="updateQuantity(cartItem.product.id, cartItem.quantity)">
+    <button (click)="removeItem(cartItem.product.id)">Remove</button>
+  </div>
+  <div><h2>Total: RM {{ total }}</h2></div>
+</div> -->
+
+<div *ngIf="cartItems.length > 0">
+  <div>
+    <table style="border: solid 1px;">
+      <tr>
+        <th style="width: 100px;">Image</th>
+        <th style="width: 100px;">Title</th>
+        <th style="width: 100px;">Price</th>
+        <th style="width: 100px;">Quantity</th>
+        <th style="width: 100px;">Action</th>
+      </tr>
+      <tr *ngFor="let cartItem of cartItems"> 
+        <td>
+          <img [src]="cartItem.product.thumbnail" alt="Thumbnail of {{ cartItem.product.title }}" class="cart-product-image">
+        </td>
+        <td><span>{{ cartItem.product.title }}</span></td>
+        <td><span>RM {{ cartItem.product.price }}</span></td>
+        <td>
+          <input type="number" [(ngModel)]="cartItem.quantity" (change)="updateQuantity(cartItem.product.id, cartItem.quantity)">
+        </td>
+        <td><button mat-raised-button color="warn" (click)="removeItem(cartItem.product.id)">Remove</button></td>
+      </tr>
+    </table>
+  </div>
+  <div><h2>Total: RM {{ total }}</h2></div>
+</div>

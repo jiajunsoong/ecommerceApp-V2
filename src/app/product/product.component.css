@@ -3,4 +3,9 @@
   margin: auto;
   margin-bottom: 10px;
   background-color: beige;
+  position: static;
+}
+
+.product-card-image{
+  position: static;
 }
