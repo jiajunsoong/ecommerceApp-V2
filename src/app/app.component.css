@@ -1,4 +1,4 @@
-.top-bar{
+/* .top-bar{
   overflow: hidden;
   height: 68px;
   background-color: #1976d2;
@@ -10,9 +10,8 @@
   position: fixed;
   top: 0; 
   width: 100%; 
-}
+} */
 
 .content{
-  margin-top: 100px;
   padding: 16px;
 }

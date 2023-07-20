@@ -1,18 +1,18 @@
 /* Styles for the top bar component */
 .top-bar-nav {
+  height: 50px;
+  background-color: #1976d2;
+  padding: 16px;
   overflow: hidden;
 }
 
 .top-bar-nav a {
-  float: left;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-
-.top-bar-nav a.active {
-  background-color: #04AA6D;
+.top-bar-nav .top-bar-nav-login{
+  float: right;
 }

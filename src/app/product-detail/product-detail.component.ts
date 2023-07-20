@@ -24,7 +24,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   addToCart(product: ProductInterface) {
     if (this.productDetail) {
       this.cartService.addToCart(this.productDetail);
-      //window.alert('Your product has been added to the cart!');
+      window.alert('Your product has been added to the cart!');
     }
     console.log(this.cartService.getItems());
   }
