@@ -1,5 +1,5 @@
 export interface ProductInterface {
-  id: number;
+  id?: number; // ? means optional
   title: string;
   description: string;
   price: number;

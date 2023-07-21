@@ -8,6 +8,7 @@ import { ProductInterface } from './product-interface';
   providedIn: 'root'
 })
 export class ProductsService {
+  
 
   URL = 'https://dummyjson.com/products';
 
@@ -34,5 +35,16 @@ export class ProductsService {
   createProduct(product: ProductInterface): Observable<any> {
     // Assuming the server API endpoint for creating a new product is '/products'
     return this.http.post<any>(this.URL, product);
+  }
+
+  updateProduct(product: ProductInterface): Observable<any> {
+    // Assuming the server API endpoint for updating a product is '/products/:id'
+    return this.http.put<any>(`${this.URL}/${product.id}`, product);
+  }
+  
+
+  deleteProduct(productId: number): Observable<any> {
+    // Assuming the server API endpoint for deleting a product is '/products/:id'
+    return this.http.delete<any>(`${this.URL}/${productId}`);
   }
 }

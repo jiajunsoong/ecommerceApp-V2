@@ -4,6 +4,7 @@
   background-color: #1976d2;
   padding: 16px;
   overflow: hidden;
+  width: 100%;
 }
 
 .top-bar-nav a {

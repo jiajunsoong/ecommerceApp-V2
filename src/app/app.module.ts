@@ -13,6 +13,8 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -26,9 +28,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
+import { AddProductDialogComponent } from './manage-product/add-product-dialog/add-product-dialog.component';
 
 import { FilterPipe } from './filter.pipe';
-import { AddProductDialogComponent } from './manage-product/add-product-dialog/add-product-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,7 @@ import { AddProductDialogComponent } from './manage-product/add-product-dialog/a
     ManageProductComponent,
     LoginComponent,
     RegisterComponent,
-    AddProductDialogComponent
+    AddProductDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,9 @@ import { AddProductDialogComponent } from './manage-product/add-product-dialog/a
     MatButtonModule,
     AppRoutingModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
