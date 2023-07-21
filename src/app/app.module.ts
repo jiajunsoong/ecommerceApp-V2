@@ -28,6 +28,7 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
 import { FilterPipe } from './filter.pipe';
+import { AddProductDialogComponent } from './manage-product/add-product-dialog/add-product-dialog.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FilterPipe } from './filter.pipe';
     TopBarComponent,
     ManageProductComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddProductDialogComponent
   ],
   imports: [
     BrowserModule,

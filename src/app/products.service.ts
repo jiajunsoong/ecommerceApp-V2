@@ -30,4 +30,9 @@ export class ProductsService {
       map((ProductInterface: ProductInterface | undefined) => ProductInterface ? ProductInterface.images : [])
     );
   }
+
+  createProduct(product: ProductInterface): Observable<any> {
+    // Assuming the server API endpoint for creating a new product is '/products'
+    return this.http.post<any>(this.URL, product);
+  }
 }

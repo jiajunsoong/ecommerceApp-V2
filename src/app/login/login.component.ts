@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username!: string;
   password!: string;
+  loginFailed = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -18,9 +19,10 @@ export class LoginComponent {
     if (this.authService.login(this.username, this.password)) {
       window.alert('Login successful!');
       console.log('Login successful!');
+      this.loginFailed = false;
       this.router.navigateByUrl('/');
-      
     } else {
+      this.loginFailed = true;
       this.password = '';
       window.alert('Login failed. Please check your username and password.');
       console.log('Login failed. Please check your username and password.');

@@ -46,7 +46,4 @@ export class ManageProductComponent implements OnInit {
     this.productList.filter = filterValue;
   }
   
-  openAddProductDialog() {
-    throw new Error('Method not implemented.');
-  }
 }

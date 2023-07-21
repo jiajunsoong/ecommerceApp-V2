@@ -3,7 +3,7 @@
   <a [routerLink]="['cart']">
     <em class="material-icons">shopping_cart</em>Cart
   </a>
-  <a [routerLink]="['manage-product']" *ngIf="isAuthenticated()">
+  <a [routerLink]="['manage-product']" *ngIf="isUserAdmin() && isAuthenticated()">
     <em class="material-icons">edit</em>Manage
   </a>
   <div class="top-bar-nav-login">

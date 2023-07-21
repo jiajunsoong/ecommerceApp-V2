@@ -6,7 +6,7 @@
       <!-- Pass the input element as a template reference variable -->
       <input matInput #searchInput (keyup)="applyFilter(searchInput.value)">
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="openAddProductDialog()" class="manage-add-button">Add Product</button>
+    <button mat-raised-button color="primary" class="manage-add-button">Add Product</button>
   </div>
 
   <table mat-table [dataSource]="productList" matSort>
