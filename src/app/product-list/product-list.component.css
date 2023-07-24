@@ -3,8 +3,8 @@
   margin-bottom: 10px;
 }
 
-.product-form {
-  width: 100%;
+.product-list .product-form {
+  width: 500px;
   margin: auto;
   margin-bottom: 10px;
 }

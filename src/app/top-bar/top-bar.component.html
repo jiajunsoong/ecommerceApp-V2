@@ -7,7 +7,7 @@
     <em class="material-icons">edit</em>Manage
   </a>
   <div class="top-bar-nav-login">
-    <a (click)="logout()" *ngIf="isAuthenticated()">
+    <a [routerLink]="['/']" (click)="logout()" *ngIf="isAuthenticated()">
         <em class="material-icons">logout</em>Logout
       </a>
     <a [routerLink]="['login']" *ngIf="!isAuthenticated()">

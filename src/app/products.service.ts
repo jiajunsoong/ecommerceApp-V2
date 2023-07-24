@@ -11,6 +11,7 @@ export class ProductsService {
   
 
   URL = 'https://dummyjson.com/products';
+  addURL = 'https://dummyjson.com/products/add';
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +35,7 @@ export class ProductsService {
 
   createProduct(product: ProductInterface): Observable<any> {
     // Assuming the server API endpoint for creating a new product is '/products'
-    return this.http.post<any>(this.URL, product);
+    return this.http.post<any>(this.addURL, product);
   }
 
   updateProduct(product: ProductInterface): Observable<any> {
