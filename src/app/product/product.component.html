@@ -12,7 +12,9 @@
 
 <mat-card class="product-card">
   <mat-card-header><h3><b>{{product.title}}</b></h3></mat-card-header>
-  <img mat-card-image [src]="product.thumbnail" alt="Thumbnail of {{product.title}}" class="product-card-image">
+  <a [routerLink]="['/products', product.id]">
+    <img mat-card-image [src]="product.thumbnail" alt="Thumbnail of {{product.title}}" class="product-card-image">
+  </a>
   <mat-card-content>
     <ul>
       <li>{{product.description}}</li>
