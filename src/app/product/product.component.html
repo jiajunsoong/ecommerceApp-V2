@@ -16,8 +16,8 @@
   <mat-card-content>
     <ul>
       <li>{{product.description}}</li>
-      <li>Brand: {{product.brand}}</li>
-      <li>Price: {{product.price}}</li>
+      <li>Brand: <b>{{product.brand}}</b></li>
+      <li>Price: RM {{product.price}}</li>
     </ul>
   </mat-card-content>
   <mat-card-actions><a [routerLink]="['/products', product.id]">Learn more</a></mat-card-actions>
