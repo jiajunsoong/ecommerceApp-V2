@@ -15,6 +15,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -70,7 +71,8 @@ import { FilterPipe } from './filter.pipe';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

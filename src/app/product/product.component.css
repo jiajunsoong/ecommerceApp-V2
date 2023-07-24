@@ -7,5 +7,7 @@
 }
 
 .product-card-image{
+  width: 500px;
+  height: 250px;
   position: static;
 }

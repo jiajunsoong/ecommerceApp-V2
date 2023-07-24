@@ -27,6 +27,9 @@
         <mat-option *ngFor="let category of categories" [value]="category.value">{{category.viewValue}}</mat-option>
       </mat-select>
     </mat-form-field>
-    <app-product *ngFor="let product of productList.products | filter: selectedCategory"
-                 [product]="product"></app-product>
+    <mat-grid-list cols="3" rowHeight="500px" class="product-grid">
+      <mat-grid-tile *ngFor="let product of productList.products | filter: selectedCategory">
+        <app-product [product]="product"></app-product>
+      </mat-grid-tile>
+    </mat-grid-list>
 </form>

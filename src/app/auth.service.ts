@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  private isLoggedIn = true;
+  private isLoggedIn = false;
   private currentUser: { username: string, password: string, role: 'admin' | 'member' } | null = null;
   private users: { username: string, password: string, role: 'admin' | 'member' }[] = [
     { username: 'admin', password: 'admin123', role: 'admin' },
