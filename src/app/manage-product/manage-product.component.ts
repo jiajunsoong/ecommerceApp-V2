@@ -83,6 +83,7 @@ export class ManageProductComponent implements OnInit {
           (response) => {
             // Handle success
             console.log('Product created successfully:', response);
+            window.alert('Product created successfully.');
             // Add the new product to the productList
             this.productList.data.push(result);
             // Refresh the MatTableDataSource after adding the new product
