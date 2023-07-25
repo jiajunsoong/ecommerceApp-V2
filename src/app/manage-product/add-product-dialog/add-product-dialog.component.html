@@ -46,7 +46,7 @@
     </mat-form-field>
     <div class="add-product-dialog-images">
       <label for="image">Product Image: </label>
-      <input type="file" [(ngModel)]="data.images" name="images" multiple/>
+      <input type="file" (change)="onImagesSelected($event)" name="images" multiple/>
     </div>
   </form>
 </mat-dialog-content>

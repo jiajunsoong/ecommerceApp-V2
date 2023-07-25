@@ -9,7 +9,7 @@ import { ProductInterface } from '../../product-interface';
 })
 
 export class AddProductDialogComponent {
-  selectedFile: File | undefined; // to store the selected file
+  selectedImages: File []=[]; // to store the selected file
 
   constructor(
     public dialogRef: MatDialogRef<AddProductDialogComponent>,
@@ -20,8 +20,9 @@ export class AddProductDialogComponent {
     this.dialogRef.close();
   }
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    this.selectedFile = file;
+  onImagesSelected(event: any) {
+    const files: FileList = event.target.files;
+    // Convert FileList to an array and assign it to selectedImages
+    this.selectedImages = Array.from(files);
   }
 }
