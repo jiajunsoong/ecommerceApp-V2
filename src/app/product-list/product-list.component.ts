@@ -30,7 +30,6 @@ export class ProductListComponent implements OnInit {
         console.log(productList);
         this.productList = productList;
   
-        // Extract unique categories
         if (Array.isArray(productList)) {
           this.categories = Array.from(new Set(productList.map(product => product.category)));
         }
